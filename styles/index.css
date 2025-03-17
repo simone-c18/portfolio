@@ -6,41 +6,97 @@
     list-style: none;
 }
 
-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 35px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all .50s ease;
-}
-
 body {
     background-color: #FFF0F3;
     margin: 60px;
 }
 
-.navlist{
+nav{
+    position: sticky;
+    top: 0;
     display: flex;
-    font-family: "Inter", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #FFF0F3;
 }
 
-.navlist a{
-    display: inline-block;
-    margin: 0 35px;
-    color: white;
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h3{
+    margin-left: 10px;
+    color: #887478;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: "Gamja Flower", sans-serif;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a{
+    display: block;
+    padding: 30px 16px;
+    color: #4A5759;
+    text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
-    transition: all .50s ease;
+    font-family: "Inter", sans-serif;
+    transition: all ease-in-out 100ms;
 }
 
-.navlist a:hover{
-
+.nav-links a:hover{
+    background-color: white;
 }
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    width: 34px;
+}
+
+/* responsive design */
+
+/* mobile size */
+@media (max-width: 768px){
+    nav{
+        flex-wrap: wrap;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        height: 80px;
+    }
+
+    .nav-links{
+        display: none;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li{
+        flex-basis: 100%;
+    }
+
+    .nav-links a{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .nav-links a:hover{
+        background-color: white;
+    }
+}
+
 
 .gamja-flower-regular {
     font-family: "Gamja Flower", sans-serif;
@@ -60,7 +116,7 @@ body {
     border-radius: 8%;
     margin: auto;
     display: block;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 .heading{
@@ -111,6 +167,7 @@ body {
     color: #4A5759;
     text-decoration: underline;
     text-align: center;
+    align-items: center;
     font-size: 20px;
 }
 
